@@ -11,11 +11,20 @@ module.exports = {
 	module: {
 		rules:[
 			{
-				test: /\.json$/,
-				loader: 'json-loader'
-			}
-		],
-		loaders: [
+				test: /\.css$/,
+				use: [
+					{
+						loader: "style-loader"
+					},
+					{
+						loader: "css-loader",
+						options: {
+							modules:true
+						}
+					}
+					
+				]
+			},
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,

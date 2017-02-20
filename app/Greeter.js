@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import config from './config.json';
-//var config = require('./config.json')
+import React from 'react';
+//import config from './config.json';
 
-class Greeter extends Component {
+class Greeter extends React.Component {
 	render(){
 		return(
 			<div>
-				{config.greetText}
+				Hmm .. {config.greetText}
 			</div>
 		);
 	}
